@@ -1,0 +1,7 @@
+-- Annotations in Java  --
+
+@Id
+    {Serve para informar ao JPA qual a chave primaria}
+
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+    {Serve para informar ao JPA que a chave numerica sera auto incrementavel}
