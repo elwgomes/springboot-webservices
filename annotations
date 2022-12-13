@@ -5,3 +5,8 @@
 
 @GeneratedValue(strategy = GenerationType.IDENTITY)
     {Serve para informar ao JPA que a chave numerica sera auto incrementavel}
+
+@Configuration and @Profile("***")
+    {1- Indica que a classe eh de configuracao;
+     2- Indica o profile que ta sendo usado (pode ser verificado no application.properties)
+    }
