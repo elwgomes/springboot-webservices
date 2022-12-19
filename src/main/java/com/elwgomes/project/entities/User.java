@@ -1,5 +1,6 @@
 package com.elwgomes.project.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import  java.io.Serializable;
@@ -20,7 +21,8 @@ public class User implements Serializable {
 	private String phone;
 	private String password;
 
-
+	//jsonignore mostra os pedidos no mapeamento users/{id}
+	@JsonIgnore
 	@OneToMany(mappedBy = "client")
 	private List<Order> orders = new ArrayList<>();
 
