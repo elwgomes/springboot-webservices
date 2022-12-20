@@ -18,9 +18,10 @@ public class Product implements Serializable {
     private String name;
     private String description;
     private Double price;
-    private String imgUr;
+    private String imgUrl;
 
-    @Transient
+    @ManyToMany
+    @JoinTable(name = "tb_product_category", joinColumns = @JoinColumn(name = "product_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
     private Set<Category> categories = new HashSet<>();
 
     private Product () {
@@ -32,7 +33,7 @@ public class Product implements Serializable {
         this.name = name;
         this.description = description;
         this.price = price;
-        this.imgUr = imgUr;
+        this.imgUrl = imgUr;
     }
 
     @Override
@@ -79,16 +80,15 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public String getImgUr() {
-        return imgUr;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    public void setImgUr(String imgUr) {
-        this.imgUr = imgUr;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
-    public Product(Set<Category> categories) {
-        this.categories = categories;
+    public Set<Category> getCategories() {
+        return categories;
     }
-
 }
