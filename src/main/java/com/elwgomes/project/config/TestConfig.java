@@ -1,8 +1,10 @@
 package com.elwgomes.project.config;
 
+import com.elwgomes.project.entities.Category;
 import com.elwgomes.project.entities.Order;
 import com.elwgomes.project.entities.User;
 import com.elwgomes.project.enums.OrderStatus;
+import com.elwgomes.project.repositories.CategoryRepository;
 import com.elwgomes.project.repositories.OrderRepository;
 import com.elwgomes.project.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,9 @@ import java.util.Arrays;
 public class TestConfig implements CommandLineRunner {
 
     @Autowired
+    private CategoryRepository categoryRepository;
+
+    @Autowired
     private UserRepository userRepository;
 
     @Autowired
@@ -25,6 +30,22 @@ public class TestConfig implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        Category cat1 = new Category(
+                null,
+                "Electronics"
+        );
+        Category cat2 = new Category(
+                null,
+                "Books"
+        );
+        Category cat3 = new Category(
+                null,
+                "Computers"
+        );
+
+        categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+
         User u1 = new User(
                 null,
                 "Leonardo Gomes",
@@ -58,6 +79,7 @@ public class TestConfig implements CommandLineRunner {
                 OrderStatus.DELIVERED,
                 u1
         );
+
 
         userRepository.saveAll(Arrays.asList(u1, u2));
         orderRepository.saveAll(Arrays.asList(o1, o2, o3));
