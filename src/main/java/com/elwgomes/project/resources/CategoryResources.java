@@ -1,9 +1,7 @@
 package com.elwgomes.project.resources;
 
 import com.elwgomes.project.entities.Category;
-import com.elwgomes.project.entities.User;
 import com.elwgomes.project.services.CategoryService;
-import com.elwgomes.project.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
