@@ -1,6 +1,9 @@
 !!!! manter sempre a estrutura de camadas;
 
-resources -> são usados majoritariamente para criar endpoints na aplicação;
+resources ->
+são usados majoritariamente para criar endpoints na aplicação
+resources serao sempre controladores rest (@RestController)
+
 
 Set<Object> object = new Hashset<>();
     {Serve para informar ao programa que não ireir admitir repeticoes}
@@ -9,6 +12,15 @@ Set<Object> object = new Hashset<>();
 
 
 -- Annotations in Java  --
+@GetMapping (metodo GET do http)
+    {usamos para recuperar dados do banco de dados}
+
+@PostMapping (metodo POST do http)
+    {}
+
+
+@RequestBody 
+    {para 'postar' o objeto em formato json}
 
 @OneToOne (cascade = CascadeType.ALL)
     {serve para mapear e deixar as duas entidades com o mesmo id, ou seja, mesmo codigo}
