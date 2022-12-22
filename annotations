@@ -16,7 +16,13 @@ Set<Object> object = new Hashset<>();
     {usamos para recuperar dados do banco de dados}
 
 @PostMapping (metodo POST do http)
-    {}
+    {usamos para postar dados no banco de dados}
+
+@DeleteMapping
+    {usamos para deletar dados no banco de dados}
+
+@PathVariable
+    {usamos para que a variavel seja reconhecida como variavel da nossa URL}
 
 
 @RequestBody 
