@@ -2,6 +2,7 @@ package com.elwgomes.project.resources;
 
 import com.elwgomes.project.entities.User;
 import com.elwgomes.project.services.UserService;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -41,4 +42,9 @@ public class UserResources {
 		return ResponseEntity.noContent().build();
 	}
 
+	@PutMapping(value = "/{id}")
+	public ResponseEntity<User> update (@PathVariable Long id, @RequestBody User obj) {
+		obj = service.update(id, obj);
+		return ResponseEntity.ok().body(obj);
+	}
 }

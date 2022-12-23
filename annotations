@@ -21,6 +21,9 @@ Set<Object> object = new Hashset<>();
 @DeleteMapping
     {usamos para deletar dados no banco de dados}
 
+@PutMapping 
+    {usamos para atualizar dados no banco de dados}
+
 @PathVariable
     {usamos para que a variavel seja reconhecida como variavel da nossa URL}
 
