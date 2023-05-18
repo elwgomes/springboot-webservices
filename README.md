@@ -1,29 +1,20 @@
-# RestAPI com SpringBoot, Hibernate e JPA.
+# RestAPI com Spring Framework.
 
-<h2>Requisitos</h2>
+Projeto desenvolvido para estudos no curso de Programação Orientada a Objetos com Java, desenvolvendo uma APIRest de consultas com Springboot Framework.
 
-1- Java 17+<br>
-2- Maven 3.x+
+## Sobre o projeto
 
-<h2>Passo a passo</h2>
+### Objetivo
+Este projeto foi criado com o objetivo de adquirir conhecimento e evoluir na carreira dev através de um projeto de participação no curso de Programação Orientada a Objetos com Java, ministrada pela escola Dev Superior, com professor Nélio Alves.
 
-<h3>1. Clonar aplicativo</h3>
+### Funcinalidades
+####  - Do projeto - 
+* A funcionalidade do projeto é apresentar uma APIRest com diversos dados dispostos de forma clara e intuitiva.
 
-<code>git clone https://github.com/elwgomes/springboot-webservices.git</code>
+## Tecnologias utilizadas
+#### - Framework - 
+* Backend desenvolvido com Spring Framework.
+* Banco em memória de ambiente de desenvolvimento: H2
 
-<h3>2. Execute o aplicativo</h3>
-Vá para a pasta raiz, abra no terminal e, em seguida, <code>mvn spring-boot:run</code>
-
-O aplicativo será executado em http://localhost:5500
-
-<h2>3. Explore os endpoints</h2>
-
-```
-GET - localhost:5500/usuários | também pode tentar /products, /orders e /categories
-GET - localhost:5500/users/{id} | também pode tentar /products, /orders e /categories
-POST - localhost:5500/usuários
-PUT - localhost:5500/users/{id}
-EXCLUIR - localhost:5500/users/{id}
-```
-
-Para PUT, POST e DELETE, use Postman ou vá para /config/TestConfig.java na pasta de origem e crie uma instância manualmente.
+#### - Linguagens - 
+* JAVA
