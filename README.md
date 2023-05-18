@@ -16,7 +16,7 @@ Vá para a pasta raiz, abra no terminal e, em seguida, <code>mvn spring-boot:run
 
 O aplicativo será executado em http://localhost:5500
 
-<h2>3. Divirta-se com as APIs</h2>
+<h2>3. Explore os endpoints</h2>
 
 ```
 GET - localhost:5500/usuários | também pode tentar /products, /orders e /categories
